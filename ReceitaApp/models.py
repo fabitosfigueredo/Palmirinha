@@ -18,7 +18,7 @@ GRAUS_DE_DIFICULDADES =[
 class Receita(models.Model):
     nome = models.CharField(max_length=50)
     ingredientes = models.TextField(max_length=2000)
-    modo_de_preparo = models.TextField(max_length=8000)
+    modo_de_preparo = models.TextField(max_length=8001)
     grau_de_dificuldade = models.CharField(max_length=10,choices=GRAUS_DE_DIFICULDADES)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='imagens/',null=True)
